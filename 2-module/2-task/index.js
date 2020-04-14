@@ -4,8 +4,10 @@
  * @returns {Boolean}
  */
 function isEmpty(obj) {
-  for (key in obj){
-    return false;
+  for (key in obj) {
+    for (let key in obj) {
+      return false;
+    }
   }
   return true;
 }

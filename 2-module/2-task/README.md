@@ -6,7 +6,7 @@
 Работать должно так:
 ```js
 function isEmpty(obj) {
-  // ваш код...
+    // ваш код...
 }
 
 let schedule = {};
