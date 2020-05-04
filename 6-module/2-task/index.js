@@ -13,7 +13,7 @@ export default class ProductCard {
     tempElem.alt = 'product';
     this.elem.firstChild.append(tempElem);
     tempElem = document.createElement('span');
-    tempElem.classList.add('card__price')
+    tempElem.classList.add('card__price');
     tempElem.innerHTML = '&euro;' + (product.price).toFixed(2);
     this.elem.firstChild.append(tempElem);
     tempElem = document.createElement('div');
@@ -29,7 +29,7 @@ export default class ProductCard {
     tempElem.onclick = () => {
       let event = new CustomEvent("product-add", {detail: product.id, bubbles: true});  
       this.elem.dispatchEvent(event);
-    }
+    };
     this.elem.lastChild.append(tempElem);
     tempElem = document.createElement('img');
     tempElem.src = '/assets/images/icons/plus-icon.svg';
