@@ -73,7 +73,6 @@ export default class StepSlider {
           detail: nPos - 1,
           bubbles: true
         }));
-        console.log(nPos);
         document.querySelector('.slider_dragging').classList.remove('slider_dragging');
         document.onpointerup = null;
       };
