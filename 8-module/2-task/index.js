@@ -58,10 +58,10 @@ export default class ProductGrid {
 
   updateFilter(condition) {
     Object.assign(this.filters, condition);
-    this.currentProducts = (this.products).filter(item => (this.filters.noNuts != item.nuts) || !(this.filters.noNuts) )
-    .filter(item => ((this.filters.vegeterianOnly || this.filters.vegetarian) && item.vegeterian) || !(this.filters.vegeterianOnly || this.filters.vegetarian) )
-    .filter(item => (this.filters.maxSpiciness >= item.spiciness) || !(this.filters.maxSpiciness) )
-    .filter(item => (this.filters.category === item.category) || !(this.filters.category) );
+    this.currentProducts = (this.products).filter(item => (this.filters.noNuts != item.nuts) || !(this.filters.noNuts))
+    .filter(item => ((this.filters.vegeterianOnly || this.filters.vegetarian) && item.vegeterian) || !(this.filters.vegeterianOnly || this.filters.vegetarian))
+    .filter(item => (this.filters.maxSpiciness >= item.spiciness) || !(this.filters.maxSpiciness))
+    .filter(item => (this.filters.category === item.category) || !(this.filters.category));
     this.elem.innerHTML = '';
     this.render();
   }

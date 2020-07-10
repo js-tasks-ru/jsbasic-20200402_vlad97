@@ -49,8 +49,8 @@ export default class Carousel {
       tempElem.type = 'button';
       tempElem.classList.add('carousel__button');
       tempElem.onclick = () => {
-        let event = new CustomEvent("product-add", {detail: slide.id, bubbles: true});  
-        this.elem.dispatchEvent(event);
+        let custEv = new CustomEvent('product-add', {detail: slide.id, bubbles: true});  
+        this.elem.dispatchEvent(custEv);
       };
       this.elem.lastChild.lastChild.lastChild.append(tempElem);
       tempElem = document.createElement('img');
@@ -61,7 +61,6 @@ export default class Carousel {
     let currentItem = 0;
     let currentPosition = 0;
     let elemCarusel = this.elem.querySelector(".carousel__inner");
-    let elemSlide = this.elem.querySelector(".carousel__slide");
     this.elem.querySelector(".carousel__arrow_right").addEventListener('click', () => {
       currentPosition += elemCarusel.offsetWidth;
       currentItem++;
