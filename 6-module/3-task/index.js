@@ -51,7 +51,6 @@ export default class Carousel {
       tempElem.onclick = () => {
         let custEv = new CustomEvent('product-add', {detail: slide.id, bubbles: true});  
         this.elem.dispatchEvent(custEv);
-        console.log(custEv)
       };
       this.elem.lastChild.lastChild.lastChild.append(tempElem);
       tempElem = document.createElement('img');
